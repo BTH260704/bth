@@ -40,9 +40,55 @@ private:
     CDiem c;
 
 public:
+    // Nhóm phương thức khởi tạo
+    void KhoiTao();
+    void KhoiTao(CDiem, CDiem, CDiem);
+    void KhoiTao(const CTamGiac &);
     CTamGiac();
     CTamGiac(CDiem, CDiem, CDiem);
     CTamGiac(const CTamGiac &);
+    void Nhap();
+    friend istream &operator>>(istream &, CTamGiac &);
+    // Nhóm phương thức cung cấp thông tin
+    void Xuat();
+    friend ostream &operator<<(ostream &, TamGiac &);
+    CDiem getA();
+    CDiem getB();
+    CDiem getC();
+    // Nhóm phương thức cập nhật thông tin
+    CTamGiac &operator=(CTamGiac &);
+    void setAx(float);
+    void setAy(float);
+    void setBx(float);
+    void setBy(float);
+    void setCx(float);
+    void setCy(float);
+    void setA(CDiem);
+    void setB(CDiem);
+    void setC(CDiem);
+    void setA(float, float);
+    void setC(float, float);
+    void setB(float, float);
+    // Nhóm phương thức kiểm tra
+    int IsDeu();
+    int IsCan();
+    int IsVuongCan();
+    int IsVuong();
+    // Nhóm phương thức xử lý
+    int operator==(const CTamGiac &);
+    int operator!=(const CTamGiac &);
+    int operator>(const CTamGiac &);
+    int operator>=(const CTamGiac &);
+    int operator<(const CTamGiac &);
+    int operator<=(const CTamGiac &);
+    float CTamGiac::DienTich();
+    float CTamGiac::ChuVi();
+    CDiem CTamGiac::TrongTam();
+    CDiem CTamGiac::TrucTam();
+    int CTamGiac::IsDeu();
+    int CTamGiac::IsCan();
+    int CTamGiac::IsVuong();
+    int CTamGiac::IsVuongCan();
     ~CTamGiac();
 };
 int main()
