@@ -84,6 +84,7 @@ public:
 	CHinhCau& operator=(const CHinhCau&);
 	float DienTich();
 	float TheTich();
+	~CHinhCau();
 };
 
 int main()
@@ -400,3 +401,8 @@ float CHinhCau::TheTich()
 {
 	return (4 * 3.14 * R * R * R / 3);
 }
+CHinhCau::~CHinhCau()
+{
+	return;
+}
+
